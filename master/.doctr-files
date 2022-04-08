@@ -33,6 +33,8 @@ master/_sources/generated/pcdsdevices.areadetector.plugins.TIFFPlugin.rst.txt
 master/_sources/generated/pcdsdevices.areadetector.plugins.TransformPlugin.rst.txt
 master/_sources/generated/pcdsdevices.atm.ATMTarget.rst.txt
 master/_sources/generated/pcdsdevices.atm.ArrivalTimeMonitor.rst.txt
+master/_sources/generated/pcdsdevices.atm.TM1K4.rst.txt
+master/_sources/generated/pcdsdevices.atm.TM1K4Target.rst.txt
 master/_sources/generated/pcdsdevices.atm.TM2K2.rst.txt
 master/_sources/generated/pcdsdevices.atm.TM2K2Target.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.AT1K4.rst.txt
@@ -496,6 +498,7 @@ master/_sources/sim_types.rst.txt
 master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
+master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -569,6 +572,8 @@ master/generated/pcdsdevices.areadetector.plugins.TIFFPlugin.html
 master/generated/pcdsdevices.areadetector.plugins.TransformPlugin.html
 master/generated/pcdsdevices.atm.ATMTarget.html
 master/generated/pcdsdevices.atm.ArrivalTimeMonitor.html
+master/generated/pcdsdevices.atm.TM1K4.html
+master/generated/pcdsdevices.atm.TM1K4Target.html
 master/generated/pcdsdevices.atm.TM2K2.html
 master/generated/pcdsdevices.atm.TM2K2Target.html
 master/generated/pcdsdevices.attenuator.AT1K4.html
@@ -1036,5 +1041,6 @@ master/sim_types.html
 master/tab.html
 master/ui.html
 master/upcoming_changes.html
+master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

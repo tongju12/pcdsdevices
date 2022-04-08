@@ -68,6 +68,8 @@ pcdsdevices.atm
 
     pcdsdevices.atm.ATMTarget
     pcdsdevices.atm.ArrivalTimeMonitor
+    pcdsdevices.atm.TM1K4
+    pcdsdevices.atm.TM1K4Target
     pcdsdevices.atm.TM2K2
     pcdsdevices.atm.TM2K2Target
 
