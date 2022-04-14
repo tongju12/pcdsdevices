@@ -277,6 +277,7 @@ master/_sources/generated/pcdsdevices.lxe._ScaledUnitConversionDerivedSignal.rst
 master/_sources/generated/pcdsdevices.lxe.load_calibration_file.rst.txt
 master/_sources/generated/pcdsdevices.mirror.CoatingState.rst.txt
 master/_sources/generated/pcdsdevices.mirror.FFMirror.rst.txt
+master/_sources/generated/pcdsdevices.mirror.FFMirrorZ.rst.txt
 master/_sources/generated/pcdsdevices.mirror.Gantry.rst.txt
 master/_sources/generated/pcdsdevices.mirror.KBOMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.KBOMirrorHE.rst.txt
@@ -287,6 +288,7 @@ master/_sources/generated/pcdsdevices.mirror.PointingMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.TwinCATMirrorStripe.rst.txt
 master/_sources/generated/pcdsdevices.mirror.XOffsetMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.XOffsetMirrorBend.rst.txt
+master/_sources/generated/pcdsdevices.mirror.XOffsetMirrorRTDs.rst.txt
 master/_sources/generated/pcdsdevices.mirror.XOffsetMirrorState.rst.txt
 master/_sources/generated/pcdsdevices.mirror.XOffsetMirrorSwitch.rst.txt
 master/_sources/generated/pcdsdevices.movablestand.MovableStand.rst.txt
@@ -499,6 +501,7 @@ master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
+master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -816,6 +819,7 @@ master/generated/pcdsdevices.lxe._ScaledUnitConversionDerivedSignal.html
 master/generated/pcdsdevices.lxe.load_calibration_file.html
 master/generated/pcdsdevices.mirror.CoatingState.html
 master/generated/pcdsdevices.mirror.FFMirror.html
+master/generated/pcdsdevices.mirror.FFMirrorZ.html
 master/generated/pcdsdevices.mirror.Gantry.html
 master/generated/pcdsdevices.mirror.KBOMirror.html
 master/generated/pcdsdevices.mirror.KBOMirrorHE.html
@@ -826,6 +830,7 @@ master/generated/pcdsdevices.mirror.PointingMirror.html
 master/generated/pcdsdevices.mirror.TwinCATMirrorStripe.html
 master/generated/pcdsdevices.mirror.XOffsetMirror.html
 master/generated/pcdsdevices.mirror.XOffsetMirrorBend.html
+master/generated/pcdsdevices.mirror.XOffsetMirrorRTDs.html
 master/generated/pcdsdevices.mirror.XOffsetMirrorState.html
 master/generated/pcdsdevices.mirror.XOffsetMirrorSwitch.html
 master/generated/pcdsdevices.movablestand.MovableStand.html
@@ -1042,5 +1047,6 @@ master/tab.html
 master/ui.html
 master/upcoming_changes.html
 master/upcoming_release_notes/992-tm1k4.html
+master/upcoming_release_notes/993-new_devices_for_mirrors.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

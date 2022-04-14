@@ -550,6 +550,7 @@ pcdsdevices.mirror
 
     pcdsdevices.mirror.CoatingState
     pcdsdevices.mirror.FFMirror
+    pcdsdevices.mirror.FFMirrorZ
     pcdsdevices.mirror.Gantry
     pcdsdevices.mirror.KBOMirror
     pcdsdevices.mirror.KBOMirrorHE
@@ -560,6 +561,7 @@ pcdsdevices.mirror
     pcdsdevices.mirror.TwinCATMirrorStripe
     pcdsdevices.mirror.XOffsetMirror
     pcdsdevices.mirror.XOffsetMirrorBend
+    pcdsdevices.mirror.XOffsetMirrorRTDs
     pcdsdevices.mirror.XOffsetMirrorState
     pcdsdevices.mirror.XOffsetMirrorSwitch
 
