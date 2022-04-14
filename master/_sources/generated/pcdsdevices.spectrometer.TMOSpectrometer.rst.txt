@@ -135,5 +135,6 @@
     .. autoattribute:: kind
     .. autoattribute:: needs_parent
     .. autoattribute:: stage_group
+    .. autoattribute:: transmission
     
     
