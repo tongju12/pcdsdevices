@@ -97,6 +97,8 @@ pcdsdevices.attenuator
     pcdsdevices.attenuator.FeeFilter
     pcdsdevices.attenuator.Filter
     pcdsdevices.attenuator.GasAttenuator
+    pcdsdevices.attenuator.GattApertureX
+    pcdsdevices.attenuator.GattApertureY
     pcdsdevices.attenuator.SXRLadderAttenuatorBlade
     pcdsdevices.attenuator.SXRLadderAttenuatorStates
     pcdsdevices.attenuator.get_blade_enum

@@ -55,6 +55,8 @@ master/_sources/generated/pcdsdevices.attenuator.FeeAtt.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.FeeFilter.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.Filter.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.GasAttenuator.rst.txt
+master/_sources/generated/pcdsdevices.attenuator.GattApertureX.rst.txt
+master/_sources/generated/pcdsdevices.attenuator.GattApertureY.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.SXRLadderAttenuatorBlade.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.SXRLadderAttenuatorStates.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.get_blade_enum.rst.txt
@@ -503,6 +505,7 @@ master/_sources/upcoming_changes.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
 master/_sources/upcoming_release_notes/997-spec-lightpath.rst.txt
+master/_sources/upcoming_release_notes/998-add_AT1K0_Apertures.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -598,6 +601,8 @@ master/generated/pcdsdevices.attenuator.FeeAtt.html
 master/generated/pcdsdevices.attenuator.FeeFilter.html
 master/generated/pcdsdevices.attenuator.Filter.html
 master/generated/pcdsdevices.attenuator.GasAttenuator.html
+master/generated/pcdsdevices.attenuator.GattApertureX.html
+master/generated/pcdsdevices.attenuator.GattApertureY.html
 master/generated/pcdsdevices.attenuator.SXRLadderAttenuatorBlade.html
 master/generated/pcdsdevices.attenuator.SXRLadderAttenuatorStates.html
 master/generated/pcdsdevices.attenuator.get_blade_enum.html
@@ -1050,5 +1055,6 @@ master/upcoming_changes.html
 master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/993-new_devices_for_mirrors.html
 master/upcoming_release_notes/997-spec-lightpath.html
+master/upcoming_release_notes/998-add_AT1K0_Apertures.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html
