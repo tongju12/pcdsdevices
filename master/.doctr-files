@@ -285,6 +285,7 @@ master/_sources/generated/pcdsdevices.mirror.KBOMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.KBOMirrorHE.rst.txt
 master/_sources/generated/pcdsdevices.mirror.OMMotor.rst.txt
 master/_sources/generated/pcdsdevices.mirror.OffsetMirror.rst.txt
+master/_sources/generated/pcdsdevices.mirror.OpticsPitchNotepad.rst.txt
 master/_sources/generated/pcdsdevices.mirror.Pitch.rst.txt
 master/_sources/generated/pcdsdevices.mirror.PointingMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.TwinCATMirrorStripe.rst.txt
@@ -506,6 +507,7 @@ master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
 master/_sources/upcoming_release_notes/997-spec-lightpath.rst.txt
 master/_sources/upcoming_release_notes/998-add_AT1K0_Apertures.rst.txt
+master/_sources/upcoming_release_notes/999-optics-notepad.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -831,6 +833,7 @@ master/generated/pcdsdevices.mirror.KBOMirror.html
 master/generated/pcdsdevices.mirror.KBOMirrorHE.html
 master/generated/pcdsdevices.mirror.OMMotor.html
 master/generated/pcdsdevices.mirror.OffsetMirror.html
+master/generated/pcdsdevices.mirror.OpticsPitchNotepad.html
 master/generated/pcdsdevices.mirror.Pitch.html
 master/generated/pcdsdevices.mirror.PointingMirror.html
 master/generated/pcdsdevices.mirror.TwinCATMirrorStripe.html
@@ -1056,5 +1059,6 @@ master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/993-new_devices_for_mirrors.html
 master/upcoming_release_notes/997-spec-lightpath.html
 master/upcoming_release_notes/998-add_AT1K0_Apertures.html
+master/upcoming_release_notes/999-optics-notepad.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

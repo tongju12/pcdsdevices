@@ -558,6 +558,7 @@ pcdsdevices.mirror
     pcdsdevices.mirror.KBOMirrorHE
     pcdsdevices.mirror.OMMotor
     pcdsdevices.mirror.OffsetMirror
+    pcdsdevices.mirror.OpticsPitchNotepad
     pcdsdevices.mirror.Pitch
     pcdsdevices.mirror.PointingMirror
     pcdsdevices.mirror.TwinCATMirrorStripe
