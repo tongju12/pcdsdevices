@@ -32,6 +32,27 @@
           - hinted
           - 
     
+        * - error_summary
+          - :class:`~pcdsdevices.signal.MultiDerivedSignalRO`
+          - 
+          - summarize the errors at any time on any blade via a string
+          - normal
+          - 
+    
+        * - error_summary_bitmask
+          - :class:`~pcdsdevices.signal.MultiDerivedSignalRO`
+          - 
+          - summarize errors at any time on any blade via a bitmask
+          - normal
+          - 
+    
+        * - reset_errors
+          - :class:`~pcdsdevices.signal.MultiDerivedSignal`
+          - 
+          - 
+          - normal
+          - 
+    
         * - calculator (UnrelatedComponent)
           - :class:`~pcdsdevices.attenuator.AttenuatorCalculator_AT2L0`
           - 
@@ -218,6 +239,12 @@
     
     
     
+    
+    
+    
+    
+    
+    
 
     
     
@@ -228,6 +255,7 @@
 
     
     .. automethod:: camonitor
+    .. automethod:: clear_errors
     .. automethod:: configure
     .. automethod:: describe
     .. automethod:: end_monitor_thread
@@ -237,6 +265,7 @@
     .. automethod:: mv_ginput
     .. automethod:: mvr
     .. automethod:: post_elog_status
+    .. automethod:: print_errors
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: set

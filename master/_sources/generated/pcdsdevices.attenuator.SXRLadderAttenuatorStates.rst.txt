@@ -61,7 +61,7 @@
           - Inherited from :class:`~pcdsdevices.inout.TwinCATInOutPositioner`
     
         * - reset_cmd
-          - :class:`~pcdsdevices.signal.PytmcSignal`
+          - :class:`~ophyd.signal.EpicsSignal`
           - ``:RESET``
           - Command to reset an error.
           - normal

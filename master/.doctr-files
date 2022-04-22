@@ -505,6 +505,7 @@ master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
+master/_sources/upcoming_release_notes/996-ADD_AT2L0_err_support.rst.txt
 master/_sources/upcoming_release_notes/997-spec-lightpath.rst.txt
 master/_sources/upcoming_release_notes/998-add_AT1K0_Apertures.rst.txt
 master/_sources/upcoming_release_notes/999-optics-notepad.rst.txt
@@ -1057,6 +1058,7 @@ master/ui.html
 master/upcoming_changes.html
 master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/993-new_devices_for_mirrors.html
+master/upcoming_release_notes/996-ADD_AT2L0_err_support.html
 master/upcoming_release_notes/997-spec-lightpath.html
 master/upcoming_release_notes/998-add_AT1K0_Apertures.html
 master/upcoming_release_notes/999-optics-notepad.html

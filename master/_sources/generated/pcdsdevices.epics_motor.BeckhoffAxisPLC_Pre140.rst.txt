@@ -33,7 +33,7 @@
           - Inherited from :class:`~pcdsdevices.epics_motor.BeckhoffAxisPLC`
     
         * - cmd_err_reset
-          - :class:`~pcdsdevices.signal.PytmcSignal`
+          - :class:`~ophyd.signal.EpicsSignal`
           - ``bReset``
           - Command to reset an active error
           - normal
