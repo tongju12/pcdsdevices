@@ -503,6 +503,7 @@ master/_sources/sim_types.rst.txt
 master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
+master/_sources/upcoming_release_notes/1003-pre-commit.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
 master/_sources/upcoming_release_notes/996-ADD_AT2L0_err_support.rst.txt
@@ -1056,6 +1057,7 @@ master/sim_types.html
 master/tab.html
 master/ui.html
 master/upcoming_changes.html
+master/upcoming_release_notes/1003-pre-commit.html
 master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/993-new_devices_for_mirrors.html
 master/upcoming_release_notes/996-ADD_AT2L0_err_support.html
