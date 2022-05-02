@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signal Classes &mdash; PCDS Devices 5.2.0+93.g286b38c.dirty documentation</title>
+  <title>Signal Classes &mdash; PCDS Devices 5.2.0+99.g8337d6a.dirty documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/_static/theme_overrides.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> PCDS Devices
           </a>
               <div class="version">
-                5.2.0+93.g286b38c.dirty
+                5.2.0+99.g8337d6a.dirty
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -317,8 +317,8 @@ write to multiple other signals.</p>
 <ul class="simple">
 <li><p>Multiple source signals may be used to calculate a single
 <code class="docutils literal notranslate"><span class="pre">MultiDerivedSignal</span></code> value.  The calculation method used here is
-<code class="docutils literal notranslate"><span class="pre">calculate</span></code> in either a keyword argument to the signal or a method in a
-subclass.</p></li>
+<code class="docutils literal notranslate"><span class="pre">calculate_on_get</span></code> in either a keyword argument to the signal or a method
+in a subclass.</p></li>
 <li><p>A single <code class="docutils literal notranslate"><span class="pre">MultiDerivedSignal</span></code> value, when <code class="docutils literal notranslate"><span class="pre">set()</span></code>, may be used to write
 to those same signals. The calculation method used here is
 <code class="docutils literal notranslate"><span class="pre">calculate_on_put</span></code> in either a keyword argument to the signal or a method
@@ -328,14 +328,16 @@ in a subclass.</p></li>
 <h3>A read-only MultiDerivedSignalRO<a class="headerlink" href="#a-read-only-multiderivedsignalro" title="Permalink to this headline"></a></h3>
 <p>This read-only example takes three signals from its parent device - “a”, “b”,
 and “c” - and calculates a single value for them.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MdsReadOnlyExample</span><span class="p">(</span><span class="n">Device</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">_on_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="n">SignalToValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pcdsdevices.type_hints</span> <span class="kn">import</span> <span class="n">SignalToValue</span><span class="p">,</span> <span class="n">OphydDataType</span>
+
+<span class="k">class</span> <span class="nc">MdsReadOnlyExample</span><span class="p">(</span><span class="n">Device</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_on_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mds</span><span class="p">:</span> <span class="n">MultiDerivedSignal</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="n">SignalToValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">value</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">items</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 
     <span class="n">mds</span> <span class="o">=</span> <span class="n">Cpt</span><span class="p">(</span>
         <span class="n">MultiDerivedSignalRO</span><span class="p">,</span>
         <span class="n">attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
-        <span class="n">calculate</span><span class="o">=</span><span class="n">_on_get</span><span class="p">,</span>
+        <span class="n">calculate_on_get</span><span class="o">=</span><span class="n">_on_get</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">Cpt</span><span class="p">(</span><span class="n">FakeEpicsSignal</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">Cpt</span><span class="p">(</span><span class="n">FakeEpicsSignal</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
@@ -356,10 +358,10 @@ and “c” - and calculates a single value for them.</p>
 <section id="a-read-write-multiderivedsignal">
 <h3>A read-write MultiDerivedSignal<a class="headerlink" href="#a-read-write-multiderivedsignal" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MdsReadWriteExample</span><span class="p">(</span><span class="n">Device</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">_on_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="n">SignalToValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_on_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mds</span><span class="p">:</span> <span class="n">MultiDerivedSignal</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="n">SignalToValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">value</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">items</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 
-    <span class="k">def</span> <span class="nf">_on_put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">OphydDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalToValue</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_on_put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mds</span><span class="p">:</span> <span class="n">MultiDerivedSignal</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">OphydDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalToValue</span><span class="p">:</span>
         <span class="n">to_write</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span> <span class="o">/</span> <span class="mf">3.</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">a</span><span class="p">:</span> <span class="n">to_write</span><span class="p">,</span>
@@ -370,7 +372,7 @@ and “c” - and calculates a single value for them.</p>
     <span class="n">mds</span> <span class="o">=</span> <span class="n">Cpt</span><span class="p">(</span>
         <span class="n">MultiDerivedSignal</span><span class="p">,</span>
         <span class="n">attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
-        <span class="n">calculate</span><span class="o">=</span><span class="n">_on_get</span><span class="p">,</span>
+        <span class="n">calculate_on_get</span><span class="o">=</span><span class="n">_on_get</span><span class="p">,</span>
         <span class="n">calculate_on_put</span><span class="o">=</span><span class="n">_on_put</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">Cpt</span><span class="p">(</span><span class="n">FakeEpicsSignal</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>

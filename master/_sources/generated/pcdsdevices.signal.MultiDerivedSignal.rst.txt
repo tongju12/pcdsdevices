@@ -44,7 +44,7 @@
     .. autoattribute:: tolerance
     .. autoattribute:: value
     .. autoattribute:: write_access
-    .. autoattribute:: calculate
+    .. autoattribute:: calculate_on_get
     .. autoattribute:: calculate_on_put
     
     
