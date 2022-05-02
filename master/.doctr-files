@@ -462,6 +462,7 @@ master/_sources/generated/pcdsdevices.targets.mesh_interpolation.rst.txt
 master/_sources/generated/pcdsdevices.targets.snake_grid_list.rst.txt
 master/_sources/generated/pcdsdevices.timetool.Timetool.rst.txt
 master/_sources/generated/pcdsdevices.timetool.TimetoolWithNav.rst.txt
+master/_sources/generated/pcdsdevices.utils.check_kind_flag.rst.txt
 master/_sources/generated/pcdsdevices.utils.combine_status_info.rst.txt
 master/_sources/generated/pcdsdevices.utils.convert_unit.rst.txt
 master/_sources/generated/pcdsdevices.utils.doc_format_decorator.rst.txt
@@ -474,9 +475,14 @@ master/_sources/generated/pcdsdevices.utils.get_status_value.rst.txt
 master/_sources/generated/pcdsdevices.utils.ipm_screen.rst.txt
 master/_sources/generated/pcdsdevices.utils.is_input.rst.txt
 master/_sources/generated/pcdsdevices.utils.maybe_make_method.rst.txt
+master/_sources/generated/pcdsdevices.utils.move_subdevices_to_start.rst.txt
 master/_sources/generated/pcdsdevices.utils.post_ophyds_to_elog.rst.txt
+master/_sources/generated/pcdsdevices.utils.reorder_components.rst.txt
 master/_sources/generated/pcdsdevices.utils.schedule_task.rst.txt
 master/_sources/generated/pcdsdevices.utils.set_many.rst.txt
+master/_sources/generated/pcdsdevices.utils.set_standard_ordering.rst.txt
+master/_sources/generated/pcdsdevices.utils.sort_components_by_kind.rst.txt
+master/_sources/generated/pcdsdevices.utils.sort_components_by_name.rst.txt
 master/_sources/generated/pcdsdevices.valve.GateValve.rst.txt
 master/_sources/generated/pcdsdevices.valve.VCN.rst.txt
 master/_sources/generated/pcdsdevices.valve.VFS.rst.txt
@@ -500,6 +506,7 @@ master/_sources/index.rst.txt
 master/_sources/mv.rst.txt
 master/_sources/presets.rst.txt
 master/_sources/releases.rst.txt
+master/_sources/signals.rst.txt
 master/_sources/sim_types.rst.txt
 master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
@@ -508,6 +515,7 @@ master/_sources/upcoming_release_notes/1001-jj-slits.rst.txt
 master/_sources/upcoming_release_notes/1003-pre-commit.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
 master/_sources/upcoming_release_notes/993-new_devices_for_mirrors.rst.txt
+master/_sources/upcoming_release_notes/994-reorder-cpts.rst.txt
 master/_sources/upcoming_release_notes/996-ADD_AT2L0_err_support.rst.txt
 master/_sources/upcoming_release_notes/997-spec-lightpath.rst.txt
 master/_sources/upcoming_release_notes/998-add_AT1K0_Apertures.rst.txt
@@ -1014,6 +1022,7 @@ master/generated/pcdsdevices.targets.mesh_interpolation.html
 master/generated/pcdsdevices.targets.snake_grid_list.html
 master/generated/pcdsdevices.timetool.Timetool.html
 master/generated/pcdsdevices.timetool.TimetoolWithNav.html
+master/generated/pcdsdevices.utils.check_kind_flag.html
 master/generated/pcdsdevices.utils.combine_status_info.html
 master/generated/pcdsdevices.utils.convert_unit.html
 master/generated/pcdsdevices.utils.doc_format_decorator.html
@@ -1026,9 +1035,14 @@ master/generated/pcdsdevices.utils.get_status_value.html
 master/generated/pcdsdevices.utils.ipm_screen.html
 master/generated/pcdsdevices.utils.is_input.html
 master/generated/pcdsdevices.utils.maybe_make_method.html
+master/generated/pcdsdevices.utils.move_subdevices_to_start.html
 master/generated/pcdsdevices.utils.post_ophyds_to_elog.html
+master/generated/pcdsdevices.utils.reorder_components.html
 master/generated/pcdsdevices.utils.schedule_task.html
 master/generated/pcdsdevices.utils.set_many.html
+master/generated/pcdsdevices.utils.set_standard_ordering.html
+master/generated/pcdsdevices.utils.sort_components_by_kind.html
+master/generated/pcdsdevices.utils.sort_components_by_name.html
 master/generated/pcdsdevices.valve.GateValve.html
 master/generated/pcdsdevices.valve.VCN.html
 master/generated/pcdsdevices.valve.VFS.html
@@ -1056,6 +1070,7 @@ master/presets.html
 master/releases.html
 master/search.html
 master/searchindex.js
+master/signals.html
 master/sim_types.html
 master/tab.html
 master/ui.html
@@ -1064,6 +1079,7 @@ master/upcoming_release_notes/1001-jj-slits.html
 master/upcoming_release_notes/1003-pre-commit.html
 master/upcoming_release_notes/992-tm1k4.html
 master/upcoming_release_notes/993-new_devices_for_mirrors.html
+master/upcoming_release_notes/994-reorder-cpts.html
 master/upcoming_release_notes/996-ADD_AT2L0_err_support.html
 master/upcoming_release_notes/997-spec-lightpath.html
 master/upcoming_release_notes/998-add_AT1K0_Apertures.html

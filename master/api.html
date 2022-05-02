@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API &mdash; PCDS Devices 5.2.0+75.g22c5b9c.dirty documentation</title>
+  <title>API &mdash; PCDS Devices 5.2.0+89.g8bbadc0.dirty documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/_static/theme_overrides.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> PCDS Devices
           </a>
               <div class="version">
-                5.2.0+75.g22c5b9c.dirty
+                5.2.0+89.g8bbadc0.dirty
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -708,6 +708,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pcdsdevices-utils">pcdsdevices.utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.check_kind_flag.html">pcdsdevices.utils.check_kind_flag</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.combine_status_info.html">pcdsdevices.utils.combine_status_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.convert_unit.html">pcdsdevices.utils.convert_unit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.doc_format_decorator.html">pcdsdevices.utils.doc_format_decorator</a></li>
@@ -720,9 +721,14 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.ipm_screen.html">pcdsdevices.utils.ipm_screen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.is_input.html">pcdsdevices.utils.is_input</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.maybe_make_method.html">pcdsdevices.utils.maybe_make_method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.move_subdevices_to_start.html">pcdsdevices.utils.move_subdevices_to_start</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.post_ophyds_to_elog.html">pcdsdevices.utils.post_ophyds_to_elog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.reorder_components.html">pcdsdevices.utils.reorder_components</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.schedule_task.html">pcdsdevices.utils.schedule_task</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.set_many.html">pcdsdevices.utils.set_many</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.set_standard_ordering.html">pcdsdevices.utils.set_standard_ordering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.sort_components_by_kind.html">pcdsdevices.utils.sort_components_by_kind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.utils.sort_components_by_name.html">pcdsdevices.utils.sort_components_by_name</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pcdsdevices-valve">pcdsdevices.valve</a><ul>
@@ -755,6 +761,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="signals.html">Signal Classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="base_classes.html">Base Classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sim_types.html">Simulated Devices</a></li>
 </ul>
@@ -2928,50 +2935,68 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.combine_status_info.html#pcdsdevices.utils.combine_status_info" title="pcdsdevices.utils.combine_status_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.combine_status_info</span></code></a>(obj, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.check_kind_flag.html#pcdsdevices.utils.check_kind_flag" title="pcdsdevices.utils.check_kind_flag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.check_kind_flag</span></code></a>(kind, flag)</p></td>
+<td><p>Return True if kind contains flag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.combine_status_info.html#pcdsdevices.utils.combine_status_info" title="pcdsdevices.utils.combine_status_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.combine_status_info</span></code></a>(obj, ...)</p></td>
 <td><p>Combine status information from the given attributes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.convert_unit.html#pcdsdevices.utils.convert_unit" title="pcdsdevices.utils.convert_unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.convert_unit</span></code></a>(value, unit, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.convert_unit.html#pcdsdevices.utils.convert_unit" title="pcdsdevices.utils.convert_unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.convert_unit</span></code></a>(value, unit, ...)</p></td>
 <td><p>One-line unit conversion.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.doc_format_decorator.html#pcdsdevices.utils.doc_format_decorator" title="pcdsdevices.utils.doc_format_decorator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.doc_format_decorator</span></code></a>(...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.doc_format_decorator.html#pcdsdevices.utils.doc_format_decorator" title="pcdsdevices.utils.doc_format_decorator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.doc_format_decorator</span></code></a>(...)</p></td>
 <td><p>Decorator for substituting values into a docstring.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.format_ophyds_to_html.html#pcdsdevices.utils.format_ophyds_to_html" title="pcdsdevices.utils.format_ophyds_to_html"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.format_ophyds_to_html</span></code></a>(obj)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.format_ophyds_to_html.html#pcdsdevices.utils.format_ophyds_to_html" title="pcdsdevices.utils.format_ophyds_to_html"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.format_ophyds_to_html</span></code></a>(obj)</p></td>
 <td><p>Recursively construct html that contains the output from .status() for each object provided.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.format_status_table.html#pcdsdevices.utils.format_status_table" title="pcdsdevices.utils.format_status_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.format_status_table</span></code></a>(...[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.format_status_table.html#pcdsdevices.utils.format_status_table" title="pcdsdevices.utils.format_status_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.format_status_table</span></code></a>(...[, ...])</p></td>
 <td><p>Create a PrettyTable based on status information.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_component.html#pcdsdevices.utils.get_component" title="pcdsdevices.utils.get_component"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_component</span></code></a>(obj)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_component.html#pcdsdevices.utils.get_component" title="pcdsdevices.utils.get_component"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_component</span></code></a>(obj)</p></td>
 <td><p>Get the component that made the given object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_input.html#pcdsdevices.utils.get_input" title="pcdsdevices.utils.get_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_input</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_input.html#pcdsdevices.utils.get_input" title="pcdsdevices.utils.get_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_input</span></code></a>()</p></td>
 <td><p>Waits for a single character input and returns it.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_status_float.html#pcdsdevices.utils.get_status_float" title="pcdsdevices.utils.get_status_float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_status_float</span></code></a>(...[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_status_float.html#pcdsdevices.utils.get_status_float" title="pcdsdevices.utils.get_status_float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_status_float</span></code></a>(...[, ...])</p></td>
 <td><p>Get the value of a dictionary key.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_status_value.html#pcdsdevices.utils.get_status_value" title="pcdsdevices.utils.get_status_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_status_value</span></code></a>(...[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.get_status_value.html#pcdsdevices.utils.get_status_value" title="pcdsdevices.utils.get_status_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.get_status_value</span></code></a>(...[, ...])</p></td>
 <td><p>Get the value of a dictionary key.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.ipm_screen.html#pcdsdevices.utils.ipm_screen" title="pcdsdevices.utils.ipm_screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.ipm_screen</span></code></a>(dettype, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.ipm_screen.html#pcdsdevices.utils.ipm_screen" title="pcdsdevices.utils.ipm_screen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.ipm_screen</span></code></a>(dettype, ...)</p></td>
 <td><p>Function to call the (pyQT) screen for an IPM box.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.is_input.html#pcdsdevices.utils.is_input" title="pcdsdevices.utils.is_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.is_input</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.is_input.html#pcdsdevices.utils.is_input" title="pcdsdevices.utils.is_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.is_input</span></code></a>()</p></td>
 <td><p>Utility to check if there is input available.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.maybe_make_method.html#pcdsdevices.utils.maybe_make_method" title="pcdsdevices.utils.maybe_make_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.maybe_make_method</span></code></a>(func, owner)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.maybe_make_method.html#pcdsdevices.utils.maybe_make_method" title="pcdsdevices.utils.maybe_make_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.maybe_make_method</span></code></a>(func, owner)</p></td>
 <td><p>Bind <code class="docutils literal notranslate"><span class="pre">func</span></code> as a method of <code class="docutils literal notranslate"><span class="pre">owner</span></code> if <code class="docutils literal notranslate"><span class="pre">self</span></code> is the first parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.move_subdevices_to_start.html#pcdsdevices.utils.move_subdevices_to_start" title="pcdsdevices.utils.move_subdevices_to_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.move_subdevices_to_start</span></code></a>([...])</p></td>
+<td><p>Arrange the component order of a device class to put subdevices first.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.post_ophyds_to_elog.html#pcdsdevices.utils.post_ophyds_to_elog" title="pcdsdevices.utils.post_ophyds_to_elog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.post_ophyds_to_elog</span></code></a>(objs)</p></td>
 <td><p>Take a list of ophyd objects and post their status representations to the elog.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.schedule_task.html#pcdsdevices.utils.schedule_task" title="pcdsdevices.utils.schedule_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.schedule_task</span></code></a>(func[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.reorder_components.html#pcdsdevices.utils.reorder_components" title="pcdsdevices.utils.reorder_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.reorder_components</span></code></a>([cls, ...])</p></td>
+<td><p>Rearrange the components in cls for typhos displays.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.schedule_task.html#pcdsdevices.utils.schedule_task" title="pcdsdevices.utils.schedule_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.schedule_task</span></code></a>(func[, ...])</p></td>
 <td><p>Use ophyd's dispatcher to schedule a task for later.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.set_many.html#pcdsdevices.utils.set_many" title="pcdsdevices.utils.set_many"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.set_many</span></code></a>(to_set, *[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.set_many.html#pcdsdevices.utils.set_many" title="pcdsdevices.utils.set_many"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.set_many</span></code></a>(to_set, *[, ...])</p></td>
 <td><p>Call <code class="docutils literal notranslate"><span class="pre">set</span></code> on all given signal-to-value pairs with a single Status return value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.set_standard_ordering.html#pcdsdevices.utils.set_standard_ordering" title="pcdsdevices.utils.set_standard_ordering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.set_standard_ordering</span></code></a>(cls)</p></td>
+<td><p>Set a sensible &quot;standard&quot; ordering for use in typhos.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.sort_components_by_kind.html#pcdsdevices.utils.sort_components_by_kind" title="pcdsdevices.utils.sort_components_by_kind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.sort_components_by_kind</span></code></a>(cls)</p></td>
+<td><p>Arrange the component order of a device class in kind order.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.utils.sort_components_by_name.html#pcdsdevices.utils.sort_components_by_name" title="pcdsdevices.utils.sort_components_by_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.utils.sort_components_by_name</span></code></a>([...])</p></td>
+<td><p>Arrange the component order of a device class in alphabetical order.</p></td>
 </tr>
 </tbody>
 </table>
