@@ -28,11 +28,20 @@
         * - setpoint (FCpt)
           - :class:`~ophyd.signal.EpicsSignal`
           - ``{prefix}:USER:MCC:EPHOT{line_text}:SET{bunch}``
-          - 
+          - The setpoint PV that acr listens on to update the vernier or undulator PVs as appropriate.
           - hinted
           - 
     
+        * - ref (FCpt)
+          - :class:`~ophyd.signal.EpicsSignal`
+          - ``{prefix}:USER:MCC:EPHOT{line_text}:REF{bunch}``
+          - A reference PV for the photon energy at the nominal position of the vernier or undulator.
+          - normal
+          - 
+    
 
+    
+    
     
     
     
