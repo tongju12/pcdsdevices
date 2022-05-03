@@ -152,6 +152,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: stop
     .. automethod:: summary
     .. automethod:: trigger

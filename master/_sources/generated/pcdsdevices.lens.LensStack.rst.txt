@@ -88,6 +88,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: read_lens
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: set_current_position
     .. automethod:: set_lens_set

@@ -54,6 +54,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: run
+    .. automethod:: screen
     .. automethod:: status
     .. automethod:: stop
     .. automethod:: summary

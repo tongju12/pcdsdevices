@@ -122,6 +122,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: reset
+    .. automethod:: screen
     .. automethod:: set_current
     .. automethod:: set_voltage
     .. automethod:: set_voltage_fall_rate

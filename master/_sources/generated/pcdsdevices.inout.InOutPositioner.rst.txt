@@ -30,6 +30,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: remove
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: status
     .. automethod:: summary

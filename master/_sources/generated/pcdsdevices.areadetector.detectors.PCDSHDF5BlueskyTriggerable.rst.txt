@@ -71,6 +71,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: save_images
+    .. automethod:: screen
     .. automethod:: stop
     .. automethod:: summary
     .. automethod:: trigger

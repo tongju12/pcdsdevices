@@ -129,6 +129,7 @@
     .. automethod:: print_trigger_sources
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: set_trigger_inhibit
     .. automethod:: set_trigger_source
     .. automethod:: status

@@ -146,6 +146,7 @@
     .. automethod:: read_configuration
     .. automethod:: remove
     .. automethod:: reset_calc_constant_defaults
+    .. automethod:: screen
     .. automethod:: stage_group_instances
     .. automethod:: status
     .. automethod:: stop

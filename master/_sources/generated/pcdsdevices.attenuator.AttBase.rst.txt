@@ -133,6 +133,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: remove
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: set_energy
     .. automethod:: set_position

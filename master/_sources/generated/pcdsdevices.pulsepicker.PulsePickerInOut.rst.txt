@@ -141,6 +141,7 @@
     .. automethod:: read_configuration
     .. automethod:: remove
     .. automethod:: reset
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: stage_group_instances
     .. automethod:: status

@@ -82,6 +82,7 @@
     .. automethod:: put_seq
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: show
     .. automethod:: status
     .. automethod:: stop

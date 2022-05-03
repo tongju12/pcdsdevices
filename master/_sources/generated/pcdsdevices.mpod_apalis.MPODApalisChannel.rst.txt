@@ -82,6 +82,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: set_current
     .. automethod:: set_voltage
     .. automethod:: status

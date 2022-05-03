@@ -106,6 +106,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: set_current_position
     .. automethod:: stage_group_instances

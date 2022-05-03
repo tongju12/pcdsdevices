@@ -157,6 +157,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: start
     .. automethod:: status
     .. automethod:: stop

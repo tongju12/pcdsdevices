@@ -15,6 +15,7 @@
 
     
     .. automethod:: post_elog_status
+    .. automethod:: screen
     .. automethod:: status
     
     

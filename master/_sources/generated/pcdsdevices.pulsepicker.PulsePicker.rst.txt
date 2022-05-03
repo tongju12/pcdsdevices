@@ -132,6 +132,7 @@
     .. automethod:: read_configuration
     .. automethod:: remove
     .. automethod:: reset
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: status
     .. automethod:: summary

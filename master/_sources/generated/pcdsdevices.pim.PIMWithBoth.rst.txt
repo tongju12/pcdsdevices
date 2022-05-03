@@ -83,6 +83,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: remove
+    .. automethod:: screen
     .. automethod:: stage_group_instances
     .. automethod:: status
     .. automethod:: stop

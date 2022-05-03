@@ -19,6 +19,7 @@
     .. automethod:: move
     .. automethod:: mv
     .. automethod:: post_elog_status
+    .. automethod:: screen
     .. automethod:: status
     .. automethod:: wait
     .. automethod:: wm

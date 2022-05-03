@@ -431,6 +431,7 @@
     .. automethod:: open_viewer
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: stop
     .. automethod:: summary
     .. automethod:: trigger

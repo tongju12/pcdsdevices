@@ -122,6 +122,7 @@
     .. automethod:: read_configuration
     .. automethod:: remove
     .. automethod:: remove_dia
+    .. automethod:: screen
     .. automethod:: set_energy
     .. automethod:: stage_group_instances
     .. automethod:: status

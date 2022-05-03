@@ -138,6 +138,7 @@
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: reset_calc_constant_defaults
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: set_current_position
     .. automethod:: set_position

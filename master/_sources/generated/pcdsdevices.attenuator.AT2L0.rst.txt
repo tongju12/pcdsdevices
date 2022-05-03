@@ -268,6 +268,7 @@
     .. automethod:: print_errors
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: set
     .. automethod:: set_position
     .. automethod:: status

@@ -233,6 +233,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: stage_group_instances
     .. automethod:: status
     .. automethod:: stop

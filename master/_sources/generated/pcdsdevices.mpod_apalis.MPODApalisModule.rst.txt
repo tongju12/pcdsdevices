@@ -72,6 +72,7 @@
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
+    .. automethod:: screen
     .. automethod:: set_current_ramp_speed
     .. automethod:: set_voltage_ramp_speed
     .. automethod:: stage_group_instances

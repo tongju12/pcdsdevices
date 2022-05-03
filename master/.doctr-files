@@ -513,6 +513,7 @@ master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
 master/_sources/upcoming_release_notes/1001-jj-slits.rst.txt
 master/_sources/upcoming_release_notes/1003-pre-commit.rst.txt
+master/_sources/upcoming_release_notes/1004-fix_screen_methods.rst.txt
 master/_sources/upcoming_release_notes/982-beamreqref.rst.txt
 master/_sources/upcoming_release_notes/988-api-mds-clarify.rst.txt
 master/_sources/upcoming_release_notes/992-tm1k4.rst.txt
@@ -1079,6 +1080,7 @@ master/ui.html
 master/upcoming_changes.html
 master/upcoming_release_notes/1001-jj-slits.html
 master/upcoming_release_notes/1003-pre-commit.html
+master/upcoming_release_notes/1004-fix_screen_methods.html
 master/upcoming_release_notes/982-beamreqref.html
 master/upcoming_release_notes/988-api-mds-clarify.html
 master/upcoming_release_notes/992-tm1k4.html
