@@ -511,6 +511,7 @@ master/_sources/sim_types.rst.txt
 master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
+master/_sources/upcoming_release_notes/1010-pin-qt.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -1066,5 +1067,6 @@ master/sim_types.html
 master/tab.html
 master/ui.html
 master/upcoming_changes.html
+master/upcoming_release_notes/1010-pin-qt.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html
