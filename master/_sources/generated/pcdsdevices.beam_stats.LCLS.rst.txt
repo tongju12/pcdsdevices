@@ -25,13 +25,6 @@
           - normal
           - 
     
-        * - bunch_charge_2
-          - :class:`~ophyd.signal.EpicsSignalRO`
-          - ``FBCK:BCI0:1:CHRG``
-          - Bunch Charge [nC]
-          - normal
-          - 
-    
         * - beam_event_rate
           - :class:`~ophyd.signal.EpicsSignalRO`
           - ``EVNT:SYS0:1:LCLSBEAMRATE``
@@ -166,8 +159,6 @@
           - 
     
 
-    
-    
     
     
     
