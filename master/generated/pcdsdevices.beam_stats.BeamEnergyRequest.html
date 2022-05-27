@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pcdsdevices.beam_stats.BeamEnergyRequest &mdash; PCDS Devices 6.0.0+14.gf3af826.dirty documentation</title>
+  <title>pcdsdevices.beam_stats.BeamEnergyRequest &mdash; PCDS Devices 6.0.0+24.g532717b.dirty documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pcdsdevices.beam_stats.BeamStats" href="pcdsdevices.beam_stats.BeamStats.html" />
+    <link rel="next" title="pcdsdevices.beam_stats.BeamEnergyRequestACRWait" href="pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html" />
     <link rel="prev" title="pcdsdevices.attenuator.render_ascii_att" href="pcdsdevices.attenuator.render_ascii_att.html" /> 
 </head>
 
@@ -31,7 +31,7 @@
             <a href="../index.html" class="icon icon-home"> PCDS Devices
           </a>
               <div class="version">
-                6.0.0+14.gf3af826.dirty
+                6.0.0+24.g532717b.dirty
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,7 +52,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../api.html#pcdsdevices-attenuator">pcdsdevices.attenuator</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../api.html#pcdsdevices-beam-stats">pcdsdevices.beam_stats</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pcdsdevices.beam_stats.BeamEnergyRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html">pcdsdevices.beam_stats.BeamEnergyRequestACRWait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.BeamEnergyRequestNoWait.html">pcdsdevices.beam_stats.BeamEnergyRequestNoWait</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.BeamStats.html">pcdsdevices.beam_stats.BeamStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.FakeBeamEnergyRequest.html">pcdsdevices.beam_stats.FakeBeamEnergyRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait.html">pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait.html">pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pcdsdevices.beam_stats.LCLS.html">pcdsdevices.beam_stats.LCLS</a></li>
 </ul>
 </li>
@@ -168,28 +173,40 @@
 <h1>pcdsdevices.beam_stats.BeamEnergyRequest<a class="headerlink" href="#pcdsdevices-beam-stats-beamenergyrequest" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pcdsdevices.beam_stats.</span></span><span class="sig-name descname"><span class="pre">BeamEnergyRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_small_moves</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/numbers.html#numbers.Real" title="(in Python v3.10)"><span class="pre">numbers.Real</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bunch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pcdsdevices.beam_stats.</span></span><span class="sig-name descname"><span class="pre">BeamEnergyRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acr_status_suffix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest" title="Permalink to this definition"></a></dt>
 <dd><p>Positioner to request beam color changes from ACR in eV.</p>
 <p>It is up to ACR how to and whether to fulfill these requests. This is often
 fulfilled by moving the Vernier but can also be a more involved process.</p>
-<p>Motion is immedately considered “done”, but will not execute unless the
+<p>There are two variants to this device that are implemented in classes
+below.</p>
+<p>If we get a reference to an ACR PV to use for waiting, then that can be
+passed in as the acr_status_suffix kwarg. This PV will be used to determine
+when motion has completed. This behavior is implemented in the
+<a class="reference internal" href="pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html#pcdsdevices.beam_stats.BeamEnergyRequestACRWait" title="pcdsdevices.beam_stats.BeamEnergyRequestACRWait"><code class="xref any py py-class docutils literal notranslate"><span class="pre">BeamEnergyRequestACRWait</span></code></a> class.</p>
+<p>If we don’t get a reference to an ACR PV to use for waiting, then
+motion is immedately considered “done”, but will not execute unless the
 requested position delta is larger than the tolerance. The default
 tolerance here is 30 eV, but this can be changed on a per-instance basis
 by passing <code class="docutils literal notranslate"><span class="pre">atol</span></code> into the initializer, or on a per-subclass basis by
-overriding the default.</p>
+overriding the default. This is implemented in the
+<a class="reference internal" href="pcdsdevices.beam_stats.BeamEnergyRequestNoWait.html#pcdsdevices.beam_stats.BeamEnergyRequestNoWait" title="pcdsdevices.beam_stats.BeamEnergyRequestNoWait"><code class="xref any py py-class docutils literal notranslate"><span class="pre">BeamEnergyRequestNoWait</span></code></a> class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – PV prefix for the request setpoint. This should always be a hutch name.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>required keyword</em>) – Name to use for this device in log messages, data streams, etc.</p></li>
-<li><p><strong>skip_small_moves</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – Defaults to True, which ignores move requests that are smaller than the
+<li><p><strong>skip_small_moves</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – Has no effect if using the wait-on-PV version of the class, but will
+take effect for the no-wait version of the class.
+Defaults to True, which ignores move requests that are smaller than the
 atol factor. If False, we’ll perform every requested move.
 This can be very useful for synchronized energy scans where the ACR
 side of the process can be very slow, but does not necessarily need to
 happen at every step. Rather than design complicated scan patterns, we
 can skip the small moves here and move the monochromater and beam
 request devices in parallel.</p></li>
-<li><p><strong>atol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – Absolute tolerance that determines when the move is done and when to
+<li><p><strong>atol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – Has no effect if using the wait-on-PV version of the class, but will
+take effect for the no-wait version of the class.
+Absolute tolerance that determines when the move is done and when to
 skip moves using the skip_small_moves parameter.</p></li>
 <li><p><strong>line</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – Whether to use the K line or L line PV. If provided this should be a
 string with a single character. The K line PVs have “EPHOTK”
@@ -197,6 +214,9 @@ in them, the L line PVs just have “EPHOT”. This will default to the
 line associated with the prefix hutch name, or to L line failing that.</p></li>
 <li><p><strong>bunch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>optional</em>) – Whether to move the first bunch (1) or the second bunch (2). This is
 only relevant for 2-color mode. Defaults to bunch 1.</p></li>
+<li><p><strong>acr_status_suffix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>optional</em>) – If provided, we’ll wait on the ACR PV specified by
+SIOC:SYS0:ML07:{suffix}. The selected PV should be 0 while the device
+is moving and 1 when it is done.</p></li>
 </ul>
 </dd>
 </dl>
@@ -212,21 +232,14 @@ only relevant for 2-color mode. Defaults to bunch 1.</p></li>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>done</p></td>
-<td><p><a class="reference internal" href="pcdsdevices.signal.InternalSignal.html#pcdsdevices.signal.InternalSignal" title="pcdsdevices.signal.InternalSignal"><code class="xref py py-class docutils literal notranslate"><span class="pre">InternalSignal</span></code></a></p></td>
-<td></td>
-<td></td>
-<td><p>normal</p></td>
-<td><p>Inherited from <a class="reference internal" href="pcdsdevices.pv_positioner.PVPositionerDone.html#pcdsdevices.pv_positioner.PVPositionerDone" title="pcdsdevices.pv_positioner.PVPositionerDone"><code class="xref py py-class docutils literal notranslate"><span class="pre">PVPositionerDone</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>setpoint (FCpt)</p></td>
+<tr class="row-even"><td><p>setpoint (FCpt)</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">EpicsSignal</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">{prefix}:USER:MCC:EPHOT{line_text}:SET{bunch}</span></code></p></td>
 <td><p>The setpoint PV that acr listens on to update the vernier or undulator PVs as appropriate.</p></td>
 <td><p>hinted</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>ref (FCpt)</p></td>
+<tr class="row-odd"><td><p>ref (FCpt)</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">EpicsSignal</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">{prefix}:USER:MCC:EPHOT{line_text}:REF{bunch}</span></code></p></td>
 <td><p>A reference PV for the photon energy at the nominal position of the vernier or undulator.</p></td>
@@ -236,17 +249,6 @@ only relevant for 2-color mode. Defaults to bunch 1.</p></li>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.camonitor">
-<span class="sig-name descname"><span class="pre">camonitor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.camonitor" title="Permalink to this definition"></a></dt>
-<dd><p>Shows a live-updating motor position in the terminal.</p>
-<p>This will be the value that is returned by the <a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.position" title="pcdsdevices.beam_stats.BeamEnergyRequest.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a>
-attribute.</p>
-<p>This method ends cleanly at a ctrl+c or after a call to
-<a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread" title="pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread"><code class="xref py py-meth docutils literal notranslate"><span class="pre">end_monitor_thread()</span></code></a>, which may be useful when this is called in
-a background thread.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.configure">
 <span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.10)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.10)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.10)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.10)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.configure" title="Permalink to this definition"></a></dt>
@@ -286,13 +288,6 @@ with the <code class="docutils literal notranslate"><span class="pre">event_mode
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread">
-<span class="sig-name descname"><span class="pre">end_monitor_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread" title="Permalink to this definition"></a></dt>
-<dd><p>Stop a <a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.camonitor" title="pcdsdevices.beam_stats.BeamEnergyRequest.camonitor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">camonitor()</span></code></a> or <a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.wm_update" title="pcdsdevices.beam_stats.BeamEnergyRequest.wm_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wm_update()</span></code></a> that is running in
-another thread.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.get" title="Permalink to this definition"></a></dt>
 <dd><p>Get the value of all components in the device</p>
@@ -302,16 +297,23 @@ beginning with an underscore will not be included.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.move">
-<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.move" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moved_cb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.move" title="Permalink to this definition"></a></dt>
 <dd><p>Move to a specified position, optionally waiting for motion to
 complete.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>position</strong> – Position to move to</p></li>
-<li><p><strong>moved_cb</strong> (<em>callable</em>) – Call this callback when movement has finished. This callback must
-accept one keyword argument: ‘obj’ which will be set to this
-positioner instance.</p></li>
+<li><p><strong>moved_cb</strong> (<em>callable</em>) – <p>Call this callback when movement has finished. This callback
+must accept one keyword argument: ‘obj’ which will be set to
+this positioner instance. It should also accept a positional
+argument ‘status’, the Status object.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.5.0: </span>The expected signature changed from <code class="docutils literal notranslate"><span class="pre">moved_cb(*,</span> <span class="pre">obj)</span></code> to
+<code class="docutils literal notranslate"><span class="pre">moved_cb(status,</span> <span class="pre">*,</span> <span class="pre">obj)</span></code>. The old signature is still
+supported, but a warning will be issued.</p>
+</div>
+</p></li>
 <li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – Maximum time to wait for the motion. If None, the default timeout
 for this positioner is used.</p></li>
 </ul>
@@ -324,53 +326,6 @@ for this positioner is used.</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TimeoutError" title="(in Python v3.10)"><strong>TimeoutError</strong></a> – When motion takes longer than <a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.timeout" title="pcdsdevices.beam_stats.BeamEnergyRequest.timeout"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">timeout</span></code></a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – On invalid positions</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.10)"><strong>RuntimeError</strong></a> – If motion fails other than timing out</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.mv">
-<span class="sig-name descname"><span class="pre">mv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.mv" title="Permalink to this definition"></a></dt>
-<dd><p>Absolute move to a position.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> – Desired end position.</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – If provided, the mover will throw an error if motion takes longer
-than timeout to complete. If omitted, the mover’s default timeout
-will be use.</p></li>
-<li><p><strong>wait</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>, wait for motion completion before returning.
-Defaults to <code class="xref std std-keyword docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>log</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>, logs the move at INFO level.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.mv_ginput">
-<span class="sig-name descname"><span class="pre">mv_ginput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.mv_ginput" title="Permalink to this definition"></a></dt>
-<dd><p>Moves to a location the user clicks on.</p>
-<p>If there are existing plots, this will be the position on the most
-recently active plot. If there are no existing plots, an empty plot
-will be created with the motor’s limits as the range.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.mvr">
-<span class="sig-name descname"><span class="pre">mvr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.mvr" title="Permalink to this definition"></a></dt>
-<dd><p>Relative move from this position.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>delta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – Desired change in position.</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – If provided, the mover will throw an error if motion takes longer
-than timeout to complete. If omitted, the mover’s default timeout
-will be use.</p></li>
-<li><p><strong>wait</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>, wait for motion completion before returning.
-Defaults to <code class="xref std std-keyword docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>log</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>, logs the move at INFO level.</p></li>
 </ul>
 </dd>
 </dl>
@@ -423,7 +378,7 @@ be overridden for more specialized screens.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.set">
-<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moved_cb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.10)"><span class="pre">Callable</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post76+g0895f9f)"><span class="pre">ophyd.status.StatusBase</span></a></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.set" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moved_cb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.10)"><span class="pre">Callable</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post78+g94f54d5)"><span class="pre">ophyd.status.StatusBase</span></a></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.set" title="Permalink to this definition"></a></dt>
 <dd><p>Set a value and return a Status object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -453,13 +408,6 @@ it is done.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.set_position">
-<span class="sig-name descname"><span class="pre">set_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.set_position" title="Permalink to this definition"></a></dt>
-<dd><p>Alias for set_current_position.</p>
-<p>Will fail if the motor does not have set_current_position.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.status">
 <span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.status" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a str with the current pv values for the device.</p>
@@ -478,7 +426,7 @@ it is done.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.trigger">
-<span class="sig-name descname"><span class="pre">trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post76+g0895f9f)"><span class="pre">ophyd.status.StatusBase</span></a></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.trigger" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post78+g94f54d5)"><span class="pre">ophyd.status.StatusBase</span></a></span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.trigger" title="Permalink to this definition"></a></dt>
 <dd><p>Trigger the device and return status object.</p>
 <p>This method is responsible for implementing ‘trigger’ or
 ‘acquire’ functionality of this device.</p>
@@ -486,107 +434,20 @@ it is done.</p>
 and it being able to be read (via the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code> method) then this method is
 also responsible for arranging that the
-<a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post76+g0895f9f)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a> object returned by this method
+<a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post78+g94f54d5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a> object returned by this method
 is notified when the device is ready to be read.</p>
 <p>If there is no delay between triggering and being readable,
-then this method must return a <a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post76+g0895f9f)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a>
+then this method must return a <a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post78+g94f54d5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a>
 object which is already completed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>status</strong> (<em>StatusBase</em>) – <a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post76+g0895f9f)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a> object which will be marked
+<dd class="field-odd"><p><strong>status</strong> (<em>StatusBase</em>) – <a class="reference external" href="https://blueskyproject.io/ophyd/generated/ophyd.status.StatusBase.html#ophyd.status.StatusBase" title="(in ophyd v1.6.4.post78+g94f54d5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusBase</span></code></a> object which will be marked
 as complete when the device is ready to be read.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.tweak">
-<span class="sig-name descname"><span class="pre">tweak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.tweak" title="Permalink to this definition"></a></dt>
-<dd><p>Control this motor using the arrow keys.</p>
-<p>Use left arrow to step negative and right arrow to step positive.
-Use up arrow to increase step size and down arrow to decrease step
-size. Press q or ctrl+c to quit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – starting step size, default = 0.1</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.umv">
-<span class="sig-name descname"><span class="pre">umv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.umv" title="Permalink to this definition"></a></dt>
-<dd><p>Move to a position, wait, and update with a progress bar.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – Desired end position.</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – If provided, the mover will throw an error if motion takes longer
-than timeout to complete. If omitted, the mover’s default timeout
-will be use.</p></li>
-<li><p><strong>log</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, logs the move at INFO level.</p></li>
-<li><p><strong>newline</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, inserts a newline after the updates.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.umvr">
-<span class="sig-name descname"><span class="pre">umvr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.umvr" title="Permalink to this definition"></a></dt>
-<dd><p>Relative move from this position, wait, and update with a progress bar.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>delta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) – Desired change in position.</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em>, </em><em>optional</em>) – If provided, the mover will throw an error if motion takes longer
-than timeout to complete. If omitted, the mover’s default timeout
-will be use.</p></li>
-<li><p><strong>log</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, logs the move at INFO level.</p></li>
-<li><p><strong>newline</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, inserts a newline after the updates.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.wait">
-<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.wait" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.wm">
-<span class="sig-name descname"><span class="pre">wm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.wm" title="Permalink to this definition"></a></dt>
-<dd><p>Get the mover’s current positon (where motor).</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.wm_update">
-<span class="sig-name descname"><span class="pre">wm_update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.wm_update" title="Permalink to this definition"></a></dt>
-<dd><p>Shows a live-updating motor position in the terminal.</p>
-<p>This will be the value that is returned by the <a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.position" title="pcdsdevices.beam_stats.BeamEnergyRequest.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a>
-attribute.</p>
-<p>This method ends cleanly at a ctrl+c or after a call to
-<a class="reference internal" href="#pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread" title="pcdsdevices.beam_stats.BeamEnergyRequest.end_monitor_thread"><code class="xref py py-meth docutils literal notranslate"><span class="pre">end_monitor_thread()</span></code></a>, which may be useful when this is called in
-a background thread.</p>
-</dd></dl>
-
 <p class="rubric">Attributes</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.actuate">
-<span class="sig-name descname"><span class="pre">actuate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.actuate" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.actuate_value">
-<span class="sig-name descname"><span class="pre">actuate_value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.actuate_value" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.atol">
-<span class="sig-name descname"><span class="pre">atol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.atol" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.configuration_attrs">
 <span class="sig-name descname"><span class="pre">configuration_attrs</span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.configuration_attrs" title="Permalink to this definition"></a></dt>
@@ -598,14 +459,9 @@ a background thread.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.done_value">
-<span class="sig-name descname"><span class="pre">done_value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.done_value" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.egu">
 <span class="sig-name descname"><span class="pre">egu</span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.egu" title="Permalink to this definition"></a></dt>
-<dd><p>The engineering units (EGU) for a position</p>
+<dd><p>The engineering units (EGU) for positions</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -652,11 +508,9 @@ a background thread.</p>
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.moving">
 <span class="sig-name descname"><span class="pre">moving</span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.moving" title="Permalink to this definition"></a></dt>
 <dd><p>Whether or not the motor is moving</p>
-<p>If a <a class="reference internal" href="pcdsdevices.attenuator.AT1K4.html#pcdsdevices.attenuator.AT1K4.done" title="pcdsdevices.attenuator.AT1K4.done"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">done</span></code></a> PV is specified, it will be read directly to get the motion
-status. If not, it determined from the internal state of PVPositioner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>bool</em></p>
+<dd class="field-odd"><p><strong>moving</strong> (<em>bool</em>)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -673,30 +527,10 @@ status. If not, it determined from the internal state of PVPositioner.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.put_complete">
-<span class="sig-name descname"><span class="pre">put_complete</span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.put_complete" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.readback">
-<span class="sig-name descname"><span class="pre">readback</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.readback" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.settle_time">
 <span class="sig-name descname"><span class="pre">settle_time</span></span><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.settle_time" title="Permalink to this definition"></a></dt>
 <dd><p>Amount of time to wait after moves to report status completion</p>
 </dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.stop_signal">
-<span class="sig-name descname"><span class="pre">stop_signal</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.stop_signal" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.stop_value">
-<span class="sig-name descname"><span class="pre">stop_value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pcdsdevices.beam_stats.BeamEnergyRequest.stop_value" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pcdsdevices.beam_stats.BeamEnergyRequest.timeout">
@@ -713,7 +547,7 @@ status. If not, it determined from the internal state of PVPositioner.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pcdsdevices.attenuator.render_ascii_att.html" class="btn btn-neutral float-left" title="pcdsdevices.attenuator.render_ascii_att" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pcdsdevices.beam_stats.BeamStats.html" class="btn btn-neutral float-right" title="pcdsdevices.beam_stats.BeamStats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html" class="btn btn-neutral float-right" title="pcdsdevices.beam_stats.BeamEnergyRequestACRWait" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

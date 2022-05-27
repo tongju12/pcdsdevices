@@ -111,7 +111,12 @@ pcdsdevices.beam_stats
     :toctree: generated
 
     pcdsdevices.beam_stats.BeamEnergyRequest
+    pcdsdevices.beam_stats.BeamEnergyRequestACRWait
+    pcdsdevices.beam_stats.BeamEnergyRequestNoWait
     pcdsdevices.beam_stats.BeamStats
+    pcdsdevices.beam_stats.FakeBeamEnergyRequest
+    pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait
+    pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait
     pcdsdevices.beam_stats.LCLS
 
 pcdsdevices.ccm

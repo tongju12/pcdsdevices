@@ -62,7 +62,12 @@ master/_sources/generated/pcdsdevices.attenuator.SXRLadderAttenuatorStates.rst.t
 master/_sources/generated/pcdsdevices.attenuator.get_blade_enum.rst.txt
 master/_sources/generated/pcdsdevices.attenuator.render_ascii_att.rst.txt
 master/_sources/generated/pcdsdevices.beam_stats.BeamEnergyRequest.rst.txt
+master/_sources/generated/pcdsdevices.beam_stats.BeamEnergyRequestACRWait.rst.txt
+master/_sources/generated/pcdsdevices.beam_stats.BeamEnergyRequestNoWait.rst.txt
 master/_sources/generated/pcdsdevices.beam_stats.BeamStats.rst.txt
+master/_sources/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequest.rst.txt
+master/_sources/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait.rst.txt
+master/_sources/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait.rst.txt
 master/_sources/generated/pcdsdevices.beam_stats.LCLS.rst.txt
 master/_sources/generated/pcdsdevices.ccm.CCM.rst.txt
 master/_sources/generated/pcdsdevices.ccm.CCMAlio.rst.txt
@@ -515,6 +520,7 @@ master/_sources/upcoming_release_notes/1009-stopper_container.rst.txt
 master/_sources/upcoming_release_notes/1010-pin-qt.rst.txt
 master/_sources/upcoming_release_notes/1011-badpv.rst.txt
 master/_sources/upcoming_release_notes/1012-btps-min-pixel.rst.txt
+master/_sources/upcoming_release_notes/1013-energy-request-waiter.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/basic.css
@@ -617,7 +623,12 @@ master/generated/pcdsdevices.attenuator.SXRLadderAttenuatorStates.html
 master/generated/pcdsdevices.attenuator.get_blade_enum.html
 master/generated/pcdsdevices.attenuator.render_ascii_att.html
 master/generated/pcdsdevices.beam_stats.BeamEnergyRequest.html
+master/generated/pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html
+master/generated/pcdsdevices.beam_stats.BeamEnergyRequestNoWait.html
 master/generated/pcdsdevices.beam_stats.BeamStats.html
+master/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequest.html
+master/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait.html
+master/generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait.html
 master/generated/pcdsdevices.beam_stats.LCLS.html
 master/generated/pcdsdevices.ccm.CCM.html
 master/generated/pcdsdevices.ccm.CCMAlio.html
@@ -1074,5 +1085,6 @@ master/upcoming_release_notes/1009-stopper_container.html
 master/upcoming_release_notes/1010-pin-qt.html
 master/upcoming_release_notes/1011-badpv.html
 master/upcoming_release_notes/1012-btps-min-pixel.html
+master/upcoming_release_notes/1013-energy-request-waiter.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

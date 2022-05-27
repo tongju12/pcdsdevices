@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API &mdash; PCDS Devices 6.0.0+14.gf3af826.dirty documentation</title>
+  <title>API &mdash; PCDS Devices 6.0.0+24.g532717b.dirty documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/_static/theme_overrides.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> PCDS Devices
           </a>
               <div class="version">
-                6.0.0+14.gf3af826.dirty
+                6.0.0+24.g532717b.dirty
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -125,7 +125,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pcdsdevices-beam-stats">pcdsdevices.beam_stats</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequest.html">pcdsdevices.beam_stats.BeamEnergyRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html">pcdsdevices.beam_stats.BeamEnergyRequestACRWait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequestNoWait.html">pcdsdevices.beam_stats.BeamEnergyRequestNoWait</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamStats.html">pcdsdevices.beam_stats.BeamStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequest.html">pcdsdevices.beam_stats.FakeBeamEnergyRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait.html">pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait.html">pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pcdsdevices.beam_stats.LCLS.html">pcdsdevices.beam_stats.LCLS</a></li>
 </ul>
 </li>
@@ -1061,13 +1066,28 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequest.html#pcdsdevices.beam_stats.BeamEnergyRequest" title="pcdsdevices.beam_stats.BeamEnergyRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.BeamEnergyRequest</span></code></a>(...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequest.html#pcdsdevices.beam_stats.BeamEnergyRequest" title="pcdsdevices.beam_stats.BeamEnergyRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.BeamEnergyRequest</span></code></a>(*args)</p></td>
 <td><p>Positioner to request beam color changes from ACR in eV.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequestACRWait.html#pcdsdevices.beam_stats.BeamEnergyRequestACRWait" title="pcdsdevices.beam_stats.BeamEnergyRequestACRWait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.BeamEnergyRequestACRWait</span></code></a>(*args)</p></td>
+<td><p>BeamEnergyRequest variant that does wait on a PV.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamEnergyRequestNoWait.html#pcdsdevices.beam_stats.BeamEnergyRequestNoWait" title="pcdsdevices.beam_stats.BeamEnergyRequestNoWait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.BeamEnergyRequestNoWait</span></code></a>(*args)</p></td>
+<td><p>BeamEnergyRequest variant that does not wait on a PV.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.BeamStats.html#pcdsdevices.beam_stats.BeamStats" title="pcdsdevices.beam_stats.BeamStats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.BeamStats</span></code></a>([prefix, name])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.LCLS.html#pcdsdevices.beam_stats.LCLS" title="pcdsdevices.beam_stats.LCLS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.LCLS</span></code></a>([prefix, name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequest.html#pcdsdevices.beam_stats.FakeBeamEnergyRequest" title="pcdsdevices.beam_stats.FakeBeamEnergyRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.FakeBeamEnergyRequest</span></code></a>(*args)</p></td>
+<td><p>Required setup for fake classes to work properly with __new__ splitting</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait.html#pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait" title="pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.FakeBeamEnergyRequestACRWait</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait.html#pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait" title="pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.FakeBeamEnergyRequestNoWait</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pcdsdevices.beam_stats.LCLS.html#pcdsdevices.beam_stats.LCLS" title="pcdsdevices.beam_stats.LCLS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcdsdevices.beam_stats.LCLS</span></code></a>([prefix, name])</p></td>
 <td><p>Object to query machine Lcls Linac status.</p></td>
 </tr>
 </tbody>

@@ -18,13 +18,6 @@
           - Kind
           - Notes
     
-        * - done
-          - :class:`~pcdsdevices.signal.InternalSignal`
-          - 
-          - 
-          - normal
-          - Inherited from :class:`~pcdsdevices.pv_positioner.PVPositionerDone`
-    
         * - setpoint (FCpt)
           - :class:`~ophyd.signal.EpicsSignal`
           - ``{prefix}:USER:MCC:EPHOT{line_text}:SET{bunch}``
@@ -45,8 +38,6 @@
     
     
     
-    
-    
 
     
     
@@ -56,31 +47,19 @@
     .. rubric:: Methods
 
     
-    .. automethod:: camonitor
     .. automethod:: configure
     .. automethod:: describe
-    .. automethod:: end_monitor_thread
     .. automethod:: get
     .. automethod:: move
-    .. automethod:: mv
-    .. automethod:: mv_ginput
-    .. automethod:: mvr
     .. automethod:: post_elog_status
     .. automethod:: read
     .. automethod:: read_configuration
     .. automethod:: screen
     .. automethod:: set
-    .. automethod:: set_position
     .. automethod:: status
     .. automethod:: stop
     .. automethod:: summary
     .. automethod:: trigger
-    .. automethod:: tweak
-    .. automethod:: umv
-    .. automethod:: umvr
-    .. automethod:: wait
-    .. automethod:: wm
-    .. automethod:: wm_update
     
     
 
@@ -89,12 +68,8 @@
     .. rubric:: Attributes
 
     
-    .. autoattribute:: actuate
-    .. autoattribute:: actuate_value
-    .. autoattribute:: atol
     .. autoattribute:: configuration_attrs
     .. autoattribute:: connected
-    .. autoattribute:: done_value
     .. autoattribute:: egu
     .. autoattribute:: high_limit
     .. autoattribute:: hints
@@ -106,11 +81,7 @@
     .. autoattribute:: low_limit
     .. autoattribute:: moving
     .. autoattribute:: position
-    .. autoattribute:: put_complete
-    .. autoattribute:: readback
     .. autoattribute:: settle_time
-    .. autoattribute:: stop_signal
-    .. autoattribute:: stop_value
     .. autoattribute:: timeout
     
     
