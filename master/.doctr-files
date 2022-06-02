@@ -288,6 +288,8 @@ master/_sources/generated/pcdsdevices.mirror.FFMirrorZ.rst.txt
 master/_sources/generated/pcdsdevices.mirror.Gantry.rst.txt
 master/_sources/generated/pcdsdevices.mirror.KBOMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.KBOMirrorHE.rst.txt
+master/_sources/generated/pcdsdevices.mirror.KBOMirrorHEStates.rst.txt
+master/_sources/generated/pcdsdevices.mirror.KBOMirrorStates.rst.txt
 master/_sources/generated/pcdsdevices.mirror.OMMotor.rst.txt
 master/_sources/generated/pcdsdevices.mirror.OffsetMirror.rst.txt
 master/_sources/generated/pcdsdevices.mirror.OpticsPitchNotepad.rst.txt
@@ -521,8 +523,10 @@ master/_sources/upcoming_release_notes/1010-pin-qt.rst.txt
 master/_sources/upcoming_release_notes/1011-badpv.rst.txt
 master/_sources/upcoming_release_notes/1012-btps-min-pixel.rst.txt
 master/_sources/upcoming_release_notes/1013-energy-request-waiter.rst.txt
+master/_sources/upcoming_release_notes/1016-kbo-coating-states.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
+master/_static/_sphinx_javascript_frameworks_compat.js
 master/_static/basic.css
 master/_static/css/badge_only.css
 master/_static/css/fonts/Roboto-Slab-Bold.woff
@@ -546,7 +550,7 @@ master/_static/css/theme.css
 master/_static/doctools.js
 master/_static/documentation_options.js
 master/_static/file.png
-master/_static/jquery-3.5.1.js
+master/_static/jquery-3.6.0.js
 master/_static/jquery.js
 master/_static/js/badge_only.js
 master/_static/js/html5shiv-printshiv.min.js
@@ -849,6 +853,8 @@ master/generated/pcdsdevices.mirror.FFMirrorZ.html
 master/generated/pcdsdevices.mirror.Gantry.html
 master/generated/pcdsdevices.mirror.KBOMirror.html
 master/generated/pcdsdevices.mirror.KBOMirrorHE.html
+master/generated/pcdsdevices.mirror.KBOMirrorHEStates.html
+master/generated/pcdsdevices.mirror.KBOMirrorStates.html
 master/generated/pcdsdevices.mirror.OMMotor.html
 master/generated/pcdsdevices.mirror.OffsetMirror.html
 master/generated/pcdsdevices.mirror.OpticsPitchNotepad.html
@@ -1086,5 +1092,6 @@ master/upcoming_release_notes/1010-pin-qt.html
 master/upcoming_release_notes/1011-badpv.html
 master/upcoming_release_notes/1012-btps-min-pixel.html
 master/upcoming_release_notes/1013-energy-request-waiter.html
+master/upcoming_release_notes/1016-kbo-coating-states.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

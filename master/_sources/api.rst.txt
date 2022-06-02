@@ -561,6 +561,8 @@ pcdsdevices.mirror
     pcdsdevices.mirror.Gantry
     pcdsdevices.mirror.KBOMirror
     pcdsdevices.mirror.KBOMirrorHE
+    pcdsdevices.mirror.KBOMirrorHEStates
+    pcdsdevices.mirror.KBOMirrorStates
     pcdsdevices.mirror.OMMotor
     pcdsdevices.mirror.OffsetMirror
     pcdsdevices.mirror.OpticsPitchNotepad
