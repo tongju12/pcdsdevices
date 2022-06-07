@@ -67,7 +67,25 @@
           - normal
           - 
     
+        * - led1
+          - :class:`~pcdsdevices.cvmi_motion.CvmiLED`
+          - ``:LED:01``
+          - 
+          - normal
+          - 
+    
+        * - led2
+          - :class:`~pcdsdevices.cvmi_motion.CvmiLED`
+          - ``:LED:02``
+          - 
+          - normal
+          - 
+    
 
+    
+    
+    
+    
     
     
     

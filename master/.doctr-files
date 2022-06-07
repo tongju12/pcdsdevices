@@ -89,6 +89,7 @@ master/_sources/generated/pcdsdevices.crix_motion.QuadraticSimMotor.rst.txt
 master/_sources/generated/pcdsdevices.crix_motion.VLSOptics.rst.txt
 master/_sources/generated/pcdsdevices.crix_motion.VLSOpticsSim.rst.txt
 master/_sources/generated/pcdsdevices.cvmi_motion.CVMI.rst.txt
+master/_sources/generated/pcdsdevices.cvmi_motion.CvmiLED.rst.txt
 master/_sources/generated/pcdsdevices.cvmi_motion.KTOF.rst.txt
 master/_sources/generated/pcdsdevices.dc_devices.ICT.rst.txt
 master/_sources/generated/pcdsdevices.dc_devices.ICTBus.rst.txt
@@ -518,6 +519,7 @@ master/_sources/sim_types.rst.txt
 master/_sources/tab.rst.txt
 master/_sources/ui.rst.txt
 master/_sources/upcoming_changes.rst.txt
+master/_sources/upcoming_release_notes/1017-cvmi_led.rst.txt
 master/_sources/upcoming_release_notes/template-full.rst.txt
 master/_sources/upcoming_release_notes/template-short.rst.txt
 master/_static/_sphinx_javascript_frameworks_compat.js
@@ -648,6 +650,7 @@ master/generated/pcdsdevices.crix_motion.QuadraticSimMotor.html
 master/generated/pcdsdevices.crix_motion.VLSOptics.html
 master/generated/pcdsdevices.crix_motion.VLSOpticsSim.html
 master/generated/pcdsdevices.cvmi_motion.CVMI.html
+master/generated/pcdsdevices.cvmi_motion.CvmiLED.html
 master/generated/pcdsdevices.cvmi_motion.KTOF.html
 master/generated/pcdsdevices.dc_devices.ICT.html
 master/generated/pcdsdevices.dc_devices.ICTBus.html
@@ -1081,5 +1084,6 @@ master/sim_types.html
 master/tab.html
 master/ui.html
 master/upcoming_changes.html
+master/upcoming_release_notes/1017-cvmi_led.html
 master/upcoming_release_notes/template-full.html
 master/upcoming_release_notes/template-short.html

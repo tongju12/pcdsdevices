@@ -159,6 +159,7 @@ pcdsdevices.cvmi_motion
     :toctree: generated
 
     pcdsdevices.cvmi_motion.CVMI
+    pcdsdevices.cvmi_motion.CvmiLED
     pcdsdevices.cvmi_motion.KTOF
 
 pcdsdevices.dc_devices

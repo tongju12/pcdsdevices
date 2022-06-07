@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pcdsdevices.cvmi_motion.CVMI &mdash; PCDS Devices 6.1.0+0.gbc58615.dirty documentation</title>
+  <title>pcdsdevices.cvmi_motion.CVMI &mdash; PCDS Devices 6.1.0+10.g0caea63.dirty documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/_static/theme_overrides.css" type="text/css" />
@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pcdsdevices.cvmi_motion.KTOF" href="pcdsdevices.cvmi_motion.KTOF.html" />
+    <link rel="next" title="pcdsdevices.cvmi_motion.CvmiLED" href="pcdsdevices.cvmi_motion.CvmiLED.html" />
     <link rel="prev" title="pcdsdevices.crix_motion.VLSOpticsSim" href="pcdsdevices.crix_motion.VLSOpticsSim.html" /> 
 </head>
 
@@ -32,7 +32,7 @@
             <a href="../index.html" class="icon icon-home"> PCDS Devices
           </a>
               <div class="version">
-                6.1.0+0.gbc58615.dirty
+                6.1.0+10.g0caea63.dirty
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -56,6 +56,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api.html#pcdsdevices-crix-motion">pcdsdevices.crix_motion</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../api.html#pcdsdevices-cvmi-motion">pcdsdevices.cvmi_motion</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pcdsdevices.cvmi_motion.CVMI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pcdsdevices.cvmi_motion.CvmiLED.html">pcdsdevices.cvmi_motion.CvmiLED</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pcdsdevices.cvmi_motion.KTOF.html">pcdsdevices.cvmi_motion.KTOF</a></li>
 </ul>
 </li>
@@ -171,11 +172,14 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pcdsdevices.cvmi_motion.</span></span><span class="sig-name descname"><span class="pre">CVMI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pcdsdevices.cvmi_motion.CVMI" title="Permalink to this definition"></a></dt>
 <dd><p>CVMI Motion Class</p>
 <p>This class controls motors fixed to the CVMI Motion system for the IP1
-endstation in TMO.</p>
+endstation in TMO. It also controls LED rings for the endstation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Base PV for the LAMP motion system</p></li>
+<li><p><strong>desc</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Description field for LED.</p></li>
+<li><p><strong>pct</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Illumination percentage of a particular endstation LED.</p></li>
+<li><p><strong>pwr</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – ON/OFF powered boolean of a particular endstation LED&gt;</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Alias for the device</p></li>
 </ul>
 </dd>
@@ -237,6 +241,20 @@ endstation in TMO.</p>
 <tr class="row-even"><td><p>sample_paddle</p></td>
 <td><p><a class="reference internal" href="pcdsdevices.epics_motor.BeckhoffAxis.html#pcdsdevices.epics_motor.BeckhoffAxis" title="pcdsdevices.epics_motor.BeckhoffAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">BeckhoffAxis</span></code></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">:MMS:07</span></code></p></td>
+<td></td>
+<td><p>normal</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>led1</p></td>
+<td><p><a class="reference internal" href="pcdsdevices.cvmi_motion.CvmiLED.html#pcdsdevices.cvmi_motion.CvmiLED" title="pcdsdevices.cvmi_motion.CvmiLED"><code class="xref py py-class docutils literal notranslate"><span class="pre">CvmiLED</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">:LED:01</span></code></p></td>
+<td></td>
+<td><p>normal</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>led2</p></td>
+<td><p><a class="reference internal" href="pcdsdevices.cvmi_motion.CvmiLED.html#pcdsdevices.cvmi_motion.CvmiLED" title="pcdsdevices.cvmi_motion.CvmiLED"><code class="xref py py-class docutils literal notranslate"><span class="pre">CvmiLED</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">:LED:02</span></code></p></td>
 <td></td>
 <td><p>normal</p></td>
 <td></td>
@@ -421,7 +439,7 @@ as complete when the device is ready to be read.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pcdsdevices.crix_motion.VLSOpticsSim.html" class="btn btn-neutral float-left" title="pcdsdevices.crix_motion.VLSOpticsSim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pcdsdevices.cvmi_motion.KTOF.html" class="btn btn-neutral float-right" title="pcdsdevices.cvmi_motion.KTOF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pcdsdevices.cvmi_motion.CvmiLED.html" class="btn btn-neutral float-right" title="pcdsdevices.cvmi_motion.CvmiLED" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
